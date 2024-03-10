@@ -29,8 +29,14 @@ void setup(){
 }
 void loop(){
   Distancia distancia(sensores[1].nombre, sensores[1].pin1, sensores[1].pin2);
-  Sensor* sensoresObjetos[] = {&distancia};
+  Peso peso(sensores[0].nombre, sensores[0].pin1, sensores[0].pin2);
+
+  Sensor* sensoresObjetos[] = {&distancia, &peso};
   Comunicacion comunicacion;
-  comunicacion.medirYSerializar(sensoresObjetos[0], 1);
+
+  for (int i = 0; i < 2; i++){
+      comunicacion.medirYSerializar(sensoresObjetos[i], i);
+  }
+  
   delay(1000);
 }
