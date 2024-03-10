@@ -5,37 +5,67 @@
         "id": 1,
         "nome": "Sensor de peso",
         "tipo": "peso",
-        "unidad": "gr"
+        "unidad": "gr",
+        "modelo": "Hx711",
+        "pines": {
+          "DT": 2,
+          "SCK": 3
+        }
       },
       {
         "id": 2,
         "nome": "Sensor de distancia",
         "tipo": "Distancia",
-        "unidad": "cm"
+        "unidad": "cm",
+        "modelo": "HC-SR04",
+        "pines": {
+          "Echo": 4,
+          "Trig": 5
+        }
       },
       {
         "id": 3,
         "nome": "Sensor GPS",
         "tipo": "Ubicacion",
-        "unidad": "latitud, longitud"
+        "unidad": "latitud, longitud",
+        "modelo": "Sim808",
+        "pines": {
+          "Rx": 6,
+          "Tx": 7
+        }
       },
       {
         "id": 4,
         "nome": "Sensor MPU",
         "tipo": "Inclinacion",
-        "unidad": "grados"
+        "unidad": "grados",
+        "modelo": "MPU6050",
+        "pines": {
+          "SCL": 8,
+          "SDA": 9,
+          "int": 10
+        }
       },
       {
         "id": 5,
         "nome": "Sensor de luz",
         "tipo": "Luz",
-        "unidad": "lux"
+        "unidad": "lux",
+        "modelo": "Ldr ",
+        "pines": {
+          "DO": 11
+        }
       },
       {
         "id": 6,
         "nome": "Sensor de Velociad",
         "tipo": "Velocidad",
-        "unidad": "RMP"
+        "unidad": "RMP",
+        "modelo": "LM393",
+        "pines": {
+          "AO": 12,
+          "DO": 13
+        }
       }
     ]
   },
