@@ -8,7 +8,6 @@ class Peso : public Sensor {
   public:
     int pin1;
     int pin2;
-    String nombre;
     HX711 escala;
 
     Peso(const String& nombre ,int pin1, int pin2);
