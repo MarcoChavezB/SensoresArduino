@@ -1,0 +1,74 @@
+[
+  {
+    "sensores": [
+      {
+        "id": 1,
+        "nome": "Sensor de peso",
+        "tipo": "peso",
+        "unidad": "gr"
+      },
+      {
+        "id": 2,
+        "nome": "Sensor de distancia",
+        "tipo": "Distancia",
+        "unidad": "cm"
+      },
+      {
+        "id": 3,
+        "nome": "Sensor GPS",
+        "tipo": "Ubicacion",
+        "unidad": "latitud, longitud"
+      },
+      {
+        "id": 4,
+        "nome": "Sensor MPU",
+        "tipo": "Inclinacion",
+        "unidad": "grados"
+      },
+      {
+        "id": 5,
+        "nome": "Sensor de luz",
+        "tipo": "Luz",
+        "unidad": "lux"
+      },
+      {
+        "id": 6,
+        "nome": "Sensor de Velociad",
+        "tipo": "Velocidad",
+        "unidad": "RMP"
+      }
+    ]
+  },
+  {
+    "actuadores": [
+      {
+        "id": 1,
+        "nome": "Actuador de motor",
+        "tipo": "Motor",
+        "unidad": "RPM",
+        "descripcion": "Actuador de motor para encender y apagar un motor"
+      },
+      {
+        "id": 2,
+        "nome": "Actuador de luz",
+        "tipo": "Luz",
+        "unidad": "lux",
+        "descripcion": "Actuador de luz para encender y apagar un led"
+      },
+      {
+        "id": 3,
+        "nome": "Actuador de Inclinacion",
+        "tipo": "Sonido , notificacion",
+        "unidad": "grados",
+        "descripcion": "Actuador para encender una alerta sonora o notificacion"
+      },
+      {
+        "id": 4,
+        "nome": "Actuador de GPS",
+        "tipo": "Ubicacion",
+        "unidad": "latitud, longitud",
+        "descripcion": "Actuador para mandar una alerta si esta por fuera de una zona establecida"
+      }
+    ]
+  }
+]
