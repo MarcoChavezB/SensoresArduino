@@ -1,5 +1,5 @@
 #ifndef Peso_h
-#define peso_h
+#define Peso_h
 #include <Arduino.h>
 #include "HX711.h"
 #include "../src/Clases/Sensor.h"

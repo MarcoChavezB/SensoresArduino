@@ -16,5 +16,5 @@ void Peso::setupSensor(){
 
 float Peso::medir(){
     float peso = escala.get_units();
-    return 20.0;
+    return peso;
 }
