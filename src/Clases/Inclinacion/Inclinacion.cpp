@@ -25,6 +25,11 @@ void Inclinacion::setupSensor(){
 float Inclinacion::medir(){
   mpuSensor.getAcceleration(&ax, &ay, &az);
   float accel_ang_x = atan(ax / sqrt(pow(ay, 2) + pow(az, 2))) * (180.0 / 3.14);  
-
+  
+  if (accel_ang_x > 40 || accel_ang_x < -40) {
+    digitalWrite(13, HIGH);
+    delay(1000);
+    digitalWrite(13, LOW);
+  } 
   return accel_ang_x;
 }
