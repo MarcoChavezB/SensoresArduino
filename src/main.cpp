@@ -34,14 +34,15 @@ void setup(){
   Serial.begin(9600);
 }
 void loop(){
-  // Distancia distancia(sensores[1].nombre, sensores[1].pin1, sensores[1].pin2);
-  // Peso peso(sensores[0].nombre, sensores[0].pin1, sensores[0].pin2);
-  Inclinacion inclinacion(sensores[3].nombre, sensores[3].pin1, sensores[3].pin2, sensores[3].pin3);
-  //Temp temperatura(sensores[6].nombre, sensores[6].pin1);
+   Distancia distancia(sensores[1].nombre, sensores[1].pin1, sensores[1].pin2);
+   //Peso peso(sensores[0].nombre, sensores[0].pin1, sensores[0].pin2);
+   //Inclinacion inclinacion(sensores[3].nombre, sensores[3].pin1, sensores[3].pin2, sensores[3].pin3);
+   Temp temperatura(sensores[6].nombre, sensores[6].pin1);
 
-  Sensor* sensoresObjetos[] = {&inclinacion};
+  Sensor* sensoresObjetos[] = {&distancia, &temperatura};
   Comunicacion comunicacion;
-  for (int i = 0; i < 1; i++){
+  const int Nsensores = sizeof(sensoresObjetos)/sizeof(sensoresObjetos[0]);
+  for (int i = 0; i < Nsensores; i++){
       comunicacion.medirYSerializar(sensoresObjetos[i], i);
   }
   
