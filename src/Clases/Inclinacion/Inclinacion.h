@@ -12,7 +12,7 @@ class Inclinacion : public Sensor {
     MPU6050 mpuSensor;
     int16_t ax, ay, az;
 
-    Inclinacion(const String& nombre, int pinA1, int pinA2, int pinInt);
+    Inclinacion(const String& nombre, const String& unidad , int pinA1, int pinA2, int pinInt);
     void setupSensor();
     float medir() override;  
 };

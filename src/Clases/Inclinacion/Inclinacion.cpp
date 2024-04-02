@@ -5,8 +5,9 @@
 #include "Wire.h"
 
 
-Inclinacion::Inclinacion(const String& nombre, int pinA1, int pinA2, int pinInt) {
+Inclinacion::Inclinacion(const String& nombre, const String& unidad, int pinA1, int pinA2, int pinInt) {
   this->nombre = nombre;
+  this->unidad = unidad;
   this->pinA1 = pinA1;
   this->pinA2 = pinA2;
   this->pinInt = pinInt;

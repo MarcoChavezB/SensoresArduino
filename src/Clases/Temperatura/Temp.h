@@ -7,7 +7,7 @@ class Temp: public Sensor{
   public:
     int pin1;
 
-    Temp(const String& nombre ,int pin1);
+    Temp(const String& nombre, const String& unidad ,int pin1);
     float medir() override;
 };
 #endif

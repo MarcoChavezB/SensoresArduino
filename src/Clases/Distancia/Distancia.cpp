@@ -1,7 +1,8 @@
 #include "Distancia.h"
 
-Distancia::Distancia(const String& nombre ,int trigPin, int echoPin) {
+Distancia::Distancia(const String& nombre, const String& unidad ,int trigPin, int echoPin) {
   this->nombre = nombre;
+  this->unidad = unidad;
   this->trigPin = trigPin;
   this->echoPin = echoPin;
   medir();

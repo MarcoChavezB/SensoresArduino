@@ -8,7 +8,7 @@ class Distancia : public Sensor{
     int trigPin;
     int echoPin;
 
-    Distancia(const String& nombre ,int trigPin, int echoPin);
+    Distancia(const String& nombre, const String& unidad ,int trigPin, int echoPin);
     float medir() override;
 };
 

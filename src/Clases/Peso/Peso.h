@@ -10,7 +10,7 @@ class Peso : public Sensor {
     int pin2;
     HX711 escala;
 
-    Peso(const String& nombre ,int pin1, int pin2);
+    Peso(const String& nombre , const String& unidad ,int pin1, int pin2);
     void setupSensor();
     float medir() override;
 };

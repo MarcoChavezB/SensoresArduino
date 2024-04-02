@@ -5,6 +5,7 @@
 class Sensor {
   public:
     String nombre;
+    String unidad;
     virtual float medir() = 0;
 };
 #endif
