@@ -1,13 +1,13 @@
 #include "Temp.h"
 
-Temp::Temp(const String& nombre, const String& unidad ,int pin1) {
+Temp::Temp(const String& nombre, const String& unidad ,int pin1) : dht(pin1, DHT11) {
   this->nombre = nombre;
   this->unidad = unidad;
   this->pin1 = pin1;
+  dht.begin();
 }
 
 float Temp::medir(){
-  int valorSensor = analogRead(pin1);
-  float temperaturaCelsius = (valorSensor * 5.0 / 1023.0) * 100.0;
-  return temperaturaCelsius;
+  float t = dht.readTemperature();
+  return t;
 }
