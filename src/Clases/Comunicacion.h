@@ -7,7 +7,6 @@ class Comunicacion{
   public:
     void medirYSerializar(Sensor* sensor, int sensorId) {
       float valor = sensor->medir();
-
       if(sensorId <= 9){
         Serial.println(sensor->nombre + "-" + "0" + sensorId + "-" + valor);
       }else{

@@ -16,10 +16,6 @@ Inclinacion::Inclinacion(const String& nombre, int pinA1, int pinA2, int pinInt)
 void Inclinacion::setupSensor(){
   Wire.begin();
   mpuSensor.initialize();
-  if (!mpuSensor.testConnection()) {
-    Serial.println("MPU6050 connection failed");
-    while (1);
-  }
 }
 
 float Inclinacion::medir(){

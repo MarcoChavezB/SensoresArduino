@@ -30,21 +30,20 @@ SensorStruct sensores[] = {
 
 void setup(){
   pinMode(13, OUTPUT);
-  Serial.print("iniciando lectura");
   Serial.begin(9600);
 }
 void loop(){
    Distancia distancia(sensores[1].nombre, sensores[1].pin1, sensores[1].pin2);
-   //Peso peso(sensores[0].nombre, sensores[0].pin1, sensores[0].pin2);
-   //Inclinacion inclinacion(sensores[3].nombre, sensores[3].pin1, sensores[3].pin2, sensores[3].pin3);
+   Peso peso(sensores[0].nombre, sensores[0].pin1, sensores[0].pin2);
+   Inclinacion inclinacion(sensores[3].nombre, sensores[3].pin1, sensores[3].pin2, sensores[3].pin3);
    Temp temperatura(sensores[6].nombre, sensores[6].pin1);
 
-  Sensor* sensoresObjetos[] = {&distancia, &temperatura};
+  Sensor* sensoresObjetos[] = {&distancia, &temperatura, &peso, &inclinacion};
   Comunicacion comunicacion;
   const int Nsensores = sizeof(sensoresObjetos)/sizeof(sensoresObjetos[0]);
   for (int i = 0; i < Nsensores; i++){
       comunicacion.medirYSerializar(sensoresObjetos[i], i);
   }
   
-  delay(1000);
+  delay(2000);
 }
