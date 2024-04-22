@@ -1,4 +1,6 @@
 #include "Peso.h"
+#include "HX711.h"
+
 
 Peso::Peso(const String& nombre, const String& unidad ,int pin1, int pin2) {
   this->nombre = nombre;
@@ -16,6 +18,6 @@ void Peso::setupSensor(){
 }
 
 float Peso::medir(){
-    float peso = escala.get_units();
-    return peso;
+    //float peso = escala.get_units();
+    return 20;
 }
